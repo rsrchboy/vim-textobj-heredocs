@@ -7,11 +7,11 @@ if !has_key(g:, 'textobj#user#plugin#heredocs#start_pattern')
     let g:textobj#user#plugin#heredocs#start_pattern = '<<\~\?\([''"]\?\)\(\u\+\)\1\?'
 endif
 
-function! textobj#user#plugin#heredocs#A()
+function! textobj#user#plugin#heredocs#A() abort
     return s:FindBlock(0)
 endfunction
 
-function! textobj#user#plugin#heredocs#I()
+function! textobj#user#plugin#heredocs#I() abort
     return s:FindBlock(1)
 endfunction
 
